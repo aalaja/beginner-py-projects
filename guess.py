@@ -12,4 +12,23 @@ def guess(x):
         elif my_num == comp_num:
             print("Correct! You guessed it....you's right")
 
-guess(10)
+
+def computer_guess(x):
+    low_num = 1
+    high_num = x
+    answer = ''
+
+    while answer != 'c':
+        number = random.randint(low_num, high_num)
+        answer = input(f"Is {number} too high (H), too low (L), or correct (C)").lower()
+        if answer == 'h':
+            high_num = number - 1
+            print("The number is too high")
+        elif answer == 'l':
+            low_num = number + 1
+            print("The number is too low")
+
+    print("That's the correct number")
+
+
+computer_guess(10)
