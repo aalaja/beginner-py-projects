@@ -30,5 +30,5 @@ def computer_guess(x):
 
     print("That's the correct number")
 
-
-computer_guess(10)
+print("Let's begin the guessing game!!!")
+computer_guess(100)
